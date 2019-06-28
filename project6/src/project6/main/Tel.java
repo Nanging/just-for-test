@@ -1,8 +1,6 @@
 package project6.main;
 
-import java.util.Scanner;
-
-public class Main {
+public class Tel {
 	private static final int rent = 25;
 	private static final double price = 0.15;
 	private static final double delayrate = 0.05;
@@ -13,9 +11,9 @@ public class Main {
 			0.025,
 			0.030
 	};
-	public String calculate(int min,int time,double delay) {
-		if (min<0||time<0||delay<0) {
-			System.out.println("输入错误");
+	public static String calculate(int min,int time,double delay) {
+		if (min<0||time<0||time>12||delay<0) {
+			return "输入错误";
 		}
 		double total = rent + delay*delayrate;
 		if (min>0&&min<=60) {
@@ -50,18 +48,5 @@ public class Main {
 			}
 		}
 		return String.format("%.2f", total);
-	}
-	public static void main(String[] args) {
-//		Scanner in = new Scanner(System.in);
-//		System.out.println("选择您的支付方式：（1.支付宝 2.银行卡）");
-//		int t = in.nextInt();
-//		if (t==1) {
-//			System.out.println("您选择支付宝支付；");
-//		}else if (t==2) {
-//			System.out.println("您选择银行卡支付；");
-//		}else {
-//			System.out.println("输入错误");
-//		}
-//		in.close();
 	}
 }

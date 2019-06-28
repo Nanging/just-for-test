@@ -2,21 +2,21 @@ package sTest;
 
 public class Calendar {
 	public static void calendar(int year,int month,int day) {
-		System.out.print("ÊäÈë:"+ year + " " + month + " " + day + "  Êä³ö:");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½:"+ year + " " + month + " " + day + "  ï¿½ï¿½ï¿½:");
 		if(year < 1000 || year > 2519) {
-			System.out.println("ÄêµÄ·¶Î§ÊÇ1000-2519Äê");
+			System.out.println("ï¿½ï¿½Ä·ï¿½Î§ï¿½ï¿½1000-2519ï¿½ï¿½");
 			return;
 		}
 		if(month <= 0 || month > 12) {
-			System.out.println("ÔÂµÄ·¶Î§ÊÇ1-12ÔÂ");
-			return;
+			System.out.println("ï¿½ÂµÄ·ï¿½Î§ï¿½ï¿½1-12ï¿½ï¿½");
+			return; 
 		}
 		if(day <= 0 || day > 31) {
-			System.out.println("ÈÕµÄ·¶Î§ÊÇ1-31ÈÕ");
+			System.out.println("ï¿½ÕµÄ·ï¿½Î§ï¿½ï¿½1-31ï¿½ï¿½");
 			return;
 		}
-		if((year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))&& month == 2) {   //ÈòÄê
-			if(day > 29)System.out.println(year + "Äê" + month + "ÔÂÃ»ÓÐ" + day + "ÈÕ" );
+		if((year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))&& month == 2) {   //ï¿½ï¿½ï¿½ï¿½
+			if(day > 29)System.out.println(year + "ï¿½ï¿½" + month + "ï¿½ï¿½Ã»ï¿½ï¿½" + day + "ï¿½ï¿½" );
 			else if(day == 29)System.out.println(year+ " 3 1");
 			else System.out.println(year + " 2 " + (day+1));
 			return;
@@ -26,7 +26,7 @@ public class Calendar {
 			return;
 		}
 		if(month == 2) {
-			if(day > 28)System.out.println(year + "Äê" + month + "ÔÂÃ»ÓÐ" + day + "ÈÕ" );
+			if(day > 28)System.out.println(year + "ï¿½ï¿½" + month + "ï¿½ï¿½Ã»ï¿½ï¿½" + day + "ï¿½ï¿½" );
 			else if(day == 28)System.out.println(year+ " 3 1");
 			else System.out.println(year + " 2 " + (day+1));
 			return;
@@ -37,7 +37,7 @@ public class Calendar {
 			return;
 		}
 		if(month == 4 || month == 6 || month == 9 || month == 11) {
-			if(day == 31)System.out.println(year + "Äê" + month + "ÔÂÃ»ÓÐ31ÈÕ" );
+			if(day == 31)System.out.println(year + "ï¿½ï¿½" + month + "ï¿½ï¿½Ã»ï¿½ï¿½31ï¿½ï¿½" );
 			else if(day == 30)System.out.println(year+ " "+ (month+1)+" 1");
 			else System.out.println(year + " "+ month + " " + (day+1));
 		}

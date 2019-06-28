@@ -39,6 +39,22 @@ public class sTest {
 		Calendar.calendar(1600, 2, 29);
 		Calendar.calendar(1999, 12, 31);
 	}
+	public static void calendartest7() {
+		Calendar.calendar(2019, 6, 15);
+		Calendar.calendar(2020, 2, 28);
+		Calendar.calendar(2019, 2, 28);
+		Calendar.calendar(2019, 4, 28);
+		Calendar.calendar(2020, 2, 29);
+		Calendar.calendar(2020, 7, 29);
+		Calendar.calendar(2019, 2, 29);
+		Calendar.calendar(2019, 5, 29);
+		Calendar.calendar(2019, 2, 30);
+		Calendar.calendar(2019, 4, 30);
+		Calendar.calendar(2019, 5, 30);
+		Calendar.calendar(2019, 2, 31);
+		Calendar.calendar(2019, 1, 31);
+		Calendar.calendar(2019, 12, 31);
+	}
 	
 	public static void saletest() {
 		SaleSystem item = new SaleSystem();
@@ -156,10 +172,12 @@ public class sTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		triangletest();
-		System.out.println("------------------·Ö¸îÏß------------------------");
+		System.out.println("------------------ï¿½Ö¸ï¿½ï¿½ï¿½------------------------");
 		calendartest();
-		System.out.println("------------------·Ö¸îÏß------------------------");
+		System.out.println("------------------ï¿½Ö¸ï¿½ï¿½ï¿½------------------------");
 		saletest();
+		System.out.println("------------------ï¿½Ö¸ï¿½ï¿½ï¿½------------------------");
+		calendartest7();
 	}
 
 }
