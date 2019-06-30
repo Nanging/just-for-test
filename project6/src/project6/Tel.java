@@ -1,15 +1,15 @@
-package project6.main;
+package project6;
 
 public class Tel {
 	private static final int rent = 25;
 	private static final double price = 0.15;
 	private static final double delayrate = 0.05;
 	private static final double[] rates = {
-			0.010,
-			0.015,
-			0.020,
-			0.025,
-			0.030
+		0.010,
+		0.015,
+		0.020,
+		0.025,
+		0.030
 	};
 	public static String calculate(int min,int time,double delay) {
 		if (min<0||time<0||time>12||delay<0) {

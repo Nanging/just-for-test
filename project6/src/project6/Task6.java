@@ -1,4 +1,4 @@
-package project6.main;
+package project6;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -6,8 +6,9 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Task6 {
-	public static  Collection<Object[]> boundaryValueTestCase = Arrays.asList(
-	        new Object[][]{
+    public static Collection<Object[]> boundaryValueTestCase = Arrays.asList(
+    		
+    		new Object[][]{
 		        {0,6,100.0},{1,6,100.0},{30,6,100.0},{59,6,100.0},{60,6,100.0},
 		        {61,6,100.0},{90,6,100.0},{119,6,100.0},{120,6,100.0},{121,6,100.0},
 		        {150,6,100.0},{179,6,100.0},{180,6,100.0},{181,6,100.0},{240,6,100.0},
@@ -16,7 +17,7 @@ public class Task6 {
 		        {150,6,100.0},{-1,6,100.0},{150,-1,100.0},{150,13,100.0},{150,6,-1.0}}
 	        );	
 	public static  Collection<Object[]> equivalenceClassTestCase = Arrays.asList(
-	        new Object[][]{
+				new Object[][]{
 		        {30,1,100.0},{30,2,100.0},{30,3,100.0},{30,5,100.0},{30,9,100.0},
 		        {90,1,100.0},{90,2,100.0},{90,3,100.0},{90,5,100.0},{90,9,100.0},
 		        {150,1,100.0},{150,2,100.0},{150,3,100.0},{150,5,100.0},{150,9,100.0},
@@ -34,7 +35,9 @@ public class Task6 {
 		System.out.println("Boundary Value Testing:");
 		for (Object[] objects : boundaryValueTestCase) {
 			i++;
-			System.out.println("Tese Case "+i+" : "+Tel.calculate((int)(objects[0]), (int)(objects[1]), (double)(objects[2])));
+			System.out.println("Tese Case "+i+" : "+
+			Tel.calculate((int)(objects[0]), 
+					(int)(objects[1]), (double)(objects[2])));
 		}
 	}
 	public static void equivalenceClassTesting() {
@@ -42,7 +45,9 @@ public class Task6 {
 		System.out.println("Equivalence Class Testing:");
 		for (Object[] objects : equivalenceClassTestCase) {
 			i++;
-			System.out.println("Tese Case "+i+" : "+Tel.calculate((int)(objects[0]), (int)(objects[1]), (double)(objects[2])));
+			System.out.println("Tese Case "+i+" : "+
+			Tel.calculate((int)(objects[0]), (int)(objects[1]), 
+					(double)(objects[2])));
 		}
 	}
 	public static void decisionTableTesting() {
@@ -50,7 +55,9 @@ public class Task6 {
 		System.out.println("Decision Table Testing:");
 		for (Object[] objects : decisionTableTestCase) {
 			i++;
-			System.out.println("Tese Case "+i+" : "+Tel.calculate((int)(objects[0]), (int)(objects[1]), (double)(objects[2])));
+			System.out.println("Tese Case "+i+" : "
+			+Tel.calculate((int)(objects[0]), (int)(objects[1])
+					, (double)(objects[2])));
 		}	
 	}
 	public static void main(String[] args) {
