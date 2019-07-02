@@ -2,79 +2,81 @@ package sTest;
 
 import java.util.ArrayList;
 
-/*Ó¶½ğÎÊÌâ£º
- * µçÄÔÏúÊÛÏµÍ³£¬
- * Ö÷»ú£¨25£¤µ¥Î»¼Û¸ñ£¬Ã¿ÔÂ×î¶àÏúÊÛµÄÊıÁ¿Îª70£©£¬
- * ÏÔÊ¾Æ÷£¨30£¤µ¥Î»¼Û¸ñ£¬Ã¿ÔÂ×î¶àÏúÊÛÊıÁ¿Îª80£©£¬
- * ÍâÉè£¨45£¤µ¥Î»¼Û¸ñ£¬Ã¿ÔÂ×î¶àÏúÊÛµÄÊıÁ¿Îª90£©£»
- * Ã¿¸öÏúÊÛÔ±Ã¿ÔÂÖÁÉÙÏúÊÛÒ»Ì¨ÍêÕûµÄ»úÆ÷£¬
- * µ±ÏµÍ³µÄÖ÷»úÕâ¸ö±äÁ¿½ÓÊÜµ½-1ÖµµÄÊ±ºò£¬ÏµÍ³×Ô¶¯Í³¼Æ¸ÃÏúÊÛÔ±±¾ÔÂµÄÏúÊÛ×Ü¶î¡£
- * µ±ÏúÊÛ¶îĞ¡ÓÚµÈÓÚ1000£¨°üÀ¨1000£©°´ÕÕ10%ÌáÓ¶½ğ£¬
- * µ±ÏúÊÛ¶îÔÚ1000-1800Ö®¼ä£¨°üÀ¨1800£©µÄÊ±ºò°´ÕÕ15%ÌáÓ¶½ğ£¬
- * µ±ÏúÊÛ¶î´óÓÚ1800Ê±°´ÕÕ20%ÌáÓ¶½ğ¡£ÓÃ±ß½çÖµ·¨Éè¼Æ²âÊÔÓÃÀı¡£
+/*ä½£é‡‘é—®é¢˜ï¼š
+ * ç”µè„‘é”€å”®ç³»ç»Ÿï¼Œ
+ * ä¸»æœºï¼ˆ25ï¿¥å•ä½ä»·æ ¼ï¼Œæ¯æœˆæœ€å¤šé”€å”®çš„æ•°é‡ä¸º70ï¼‰ï¼Œ
+ * æ˜¾ç¤ºå™¨ï¼ˆ30ï¿¥å•ä½ä»·æ ¼ï¼Œæ¯æœˆæœ€å¤šé”€å”®æ•°é‡ä¸º80ï¼‰ï¼Œ
+ * å¤–è®¾ï¼ˆ45ï¿¥å•ä½ä»·æ ¼ï¼Œæ¯æœˆæœ€å¤šé”€å”®çš„æ•°é‡ä¸º90ï¼‰ï¼›
+ * æ¯ä¸ªé”€å”®å‘˜æ¯æœˆè‡³å°‘é”€å”®ä¸€å°å®Œæ•´çš„æœºå™¨ï¼Œ
+ * å½“ç³»ç»Ÿçš„ä¸»æœºè¿™ä¸ªå˜é‡æ¥å—åˆ°-1å€¼çš„æ—¶å€™ï¼Œç³»ç»Ÿè‡ªåŠ¨ç»Ÿè®¡è¯¥é”€å”®å‘˜æœ¬æœˆçš„é”€å”®æ€»é¢ã€‚
+ * å½“é”€å”®é¢å°äºç­‰äº1000ï¼ˆåŒ…æ‹¬1000ï¼‰æŒ‰ç…§10%æä½£é‡‘ï¼Œ
+ * å½“é”€å”®é¢åœ¨1000-1800ä¹‹é—´ï¼ˆåŒ…æ‹¬1800ï¼‰çš„æ—¶å€™æŒ‰ç…§15%æä½£é‡‘ï¼Œ
+ * å½“é”€å”®é¢å¤§äº1800æ—¶æŒ‰ç…§20%æä½£é‡‘ã€‚ç”¨è¾¹ç•Œå€¼æ³•è®¾è®¡æµ‹è¯•ç”¨ä¾‹ã€‚
 */
 public class SaleSystem {
-	private final int priceOfMaster = 25;
-	private final int priceOfScreen = 30;
-	private final int priceOfPeripheral = 45;
-	private int saleOfMaster =  0;
-	private int saleOfScreen =  0;
-	private int saleOfPeripheral =  0;
-	public void sell(ArrayList<Sale> saleList ) {
+	private static final int priceOfMaster = 25;
+	private static final int priceOfScreen = 30;
+	private static final int priceOfPeripheral = 45;
+	private static int saleOfMaster =  0;
+	private static int saleOfScreen =  0;
+	private static int saleOfPeripheral =  0;
+	public static double sell(ArrayList<Sale> saleList ) {
+		double salary = 0;
 		saleOfMaster =  0;
 		saleOfScreen =  0;
 		saleOfPeripheral =  0;
 //		System.out.println(saleList.size());
 		if (saleList.size() < 1) {
-			System.out.println("ÎŞÏúÊÛ¼ÇÂ¼");
-			return;
+			System.out.println("æ— é”€å”®è®°å½•");
+			return salary;
 		}
 		if(saleList.get(saleList.size()-1).mNum != -1) {
-			System.out.println("ÊäÈëÈ±ÉÙ-1×÷Îª½áÊø±êÖ¾");
+			System.out.println("è¾“å…¥ç¼ºå°‘-1ä½œä¸ºç»“æŸæ ‡å¿—");
 		}
 		for (int i = 0; i < saleList.size(); i++) {
 			Sale sale = saleList.get(i);
 			if(sale.mNum == -1) {
 				if (i != saleList.size()-1) {
-					System.out.println("ÊäÈëÊı¾İÔÚ½áÊøºóÈÔÓĞÊäÈë");
-					return;					
+					System.out.println("è¾“å…¥æ•°æ®åœ¨ç»“æŸåä»æœ‰è¾“å…¥");
+					return salary;					
 				}
 				if (saleOfMaster>=1 && saleOfScreen>=1 && saleOfPeripheral>=1) {
 					int totalSale = saleOfMaster*priceOfMaster + saleOfScreen*priceOfScreen + saleOfPeripheral*priceOfPeripheral;
-					System.out.println("±¾ÔÂÏúÊÛ×Ü¶îÎª£º"+totalSale);
-					double salary = 0;
+					System.out.println("æœ¬æœˆé”€å”®æ€»é¢ä¸ºï¼š"+totalSale);
+					salary = 0;
 					if (totalSale>=0 && totalSale<=1000) {
 						salary = totalSale*0.1;
-						System.out.println("±¾ÔÂÓ¶½ğÎª£º"+salary);
+						System.out.println("æœ¬æœˆä½£é‡‘ä¸ºï¼š"+salary);
 					}else if (totalSale<=1800) {
 						salary = totalSale*0.15;
-						System.out.println("±¾ÔÂÓ¶½ğÎª£º"+salary);
+						System.out.println("æœ¬æœˆä½£é‡‘ä¸ºï¼š"+salary);
 					}else if (totalSale>1800) {
 						salary = totalSale*0.2;
-						System.out.println("±¾ÔÂÓ¶½ğÎª£º"+salary);
+						System.out.println("æœ¬æœˆä½£é‡‘ä¸ºï¼š"+salary);
 					}else {
-						System.out.println("ÏúÊÛ¶î²»ÄÜÎª¸º");
+						System.out.println("é”€å”®é¢ä¸èƒ½ä¸ºè´Ÿ");
 					}
-					return;
+					return salary;
 				}else {
-					System.out.println("±¾ÔÂ²¢Î´³É¹¦ÏúÊÛÒ»Ì¨ÍêÕûµÄ»úÆ÷");
-					return;
+					System.out.println("æœ¬æœˆå¹¶æœªæˆåŠŸé”€å”®ä¸€å°å®Œæ•´çš„æœºå™¨");
+					return salary;
 				}
 			}else {
 				if (sale.mNum>=0 && sale.sNum>=0 && sale.pNum>=0) {
 					if(saleOfMaster+sale.mNum>70 || saleOfScreen+sale.sNum>80 || saleOfPeripheral+sale.pNum>90) {
-						System.out.println("³¬³öÃ¿ÔÂÏúÊÛÊıÁ¿");
-						return;
+						System.out.println("è¶…å‡ºæ¯æœˆé”€å”®æ•°é‡");
+						return salary;
 					}else {
 						saleOfMaster+=sale.mNum;
 						saleOfScreen+=sale.sNum;
 						saleOfPeripheral+=sale.pNum;
 					}
 				}else {
-					System.out.println("ÏúÊÛÊıÁ¿²»ÄÜÎª¸º");
-					return;
+					System.out.println("é”€å”®æ•°é‡ä¸èƒ½ä¸ºè´Ÿ");
+					return salary;
 				}
 			}
 		}
+		return salary;
 	}
 }
