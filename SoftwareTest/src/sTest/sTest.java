@@ -172,12 +172,12 @@ public class sTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		triangletest();
-		System.out.println("------------------�ָ���------------------------");
-		calendartest();
-		System.out.println("------------------�ָ���------------------------");
-		saletest();
-		System.out.println("------------------�ָ���------------------------");
-		calendartest7();
+//		System.out.println("------------------�ָ���------------------------");
+//		calendartest();
+//		System.out.println("------------------�ָ���------------------------");
+//		saletest();
+//		System.out.println("------------------�ָ���------------------------");
+//		calendartest7();
 	}
 
 }

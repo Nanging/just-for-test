@@ -1,28 +1,29 @@
 package sTest;
 
 public class Triangle {
-	public static void triangle(float a,float b,float c) {
-		System.out.print("ÊäÈë:"+ a + " " + b + " " + c + "  Êä³ö:");
+	public static String triangle(float a,float b,float c) {
+		System.out.print("è¾“å…¥:"+ a + " " + b + " " + c + "  è¾“å‡º:");
 		if(a <= 0 || b <= 0 || c <= 0) {
-			System.out.println("a¡¢b¡¢c±ØĞë´óÓÚ0");
-			return;
+			System.out.println("aã€bã€cå¿…é¡»å¤§äº0");
+			return "aã€bã€cå¿…é¡»å¤§äº0";
 		}
 		if(a > 1000 || b > 1000 || c > 1000) {
-			System.out.println("a¡¢b¡¢cÓ¦¸ÃĞ¡ÓÚµÈÓÚ1000");
-			return;
+			System.out.println("aã€bã€cåº”è¯¥å°äºç­‰äº1000");
+			return "aã€bã€cåº”è¯¥å°äºç­‰äº1000"; 
 		}
 		if(a+b <= c || b+c <= a || a+c <= b) {
-			System.out.println("·ÇÈı½ÇĞÎ");
-			return;
+			System.out.println("éä¸‰è§’å½¢");
+			return "éä¸‰è§’å½¢";
 		}
 		if(a == b && a == c) {
-			System.out.println("µÈ±ßÈı½ÇĞÎ");
-			return;
+			System.out.println("ç­‰è¾¹ä¸‰è§’å½¢");
+			return "ç­‰è¾¹ä¸‰è§’å½¢";
 		}
 		if(a == b || b == c || a == c) {
-			System.out.println("µÈÑüÈı½ÇĞÎ");
-			return;
+			System.out.println("ç­‰è…°ä¸‰è§’å½¢");
+			return "ç­‰è…°ä¸‰è§’å½¢";
 		}
-		System.out.println("Ò»°ãÈı½ÇĞÎ");
+		System.out.println("ä¸€èˆ¬ä¸‰è§’å½¢");
+		return "ä¸€èˆ¬ä¸‰è§’å½¢";
 	}
 }
