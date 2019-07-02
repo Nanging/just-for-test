@@ -19,7 +19,20 @@ public class sTest {
 		Triangle.triangle(500, 502, 999);
 		Triangle.triangle(502, 502, 1001);
 	}
-	
+	public static void triangletest2() {
+		Triangle.triangle(1, 2, 3);
+		Triangle.triangle(2, 3, 4);
+		Triangle.triangle(3, 3, 4);
+		Triangle.triangle(4, 4, 4);
+		Triangle.triangle(-1, 2, 3);
+		Triangle.triangle(-2, -3, -4);
+		Triangle.triangle(-4, -4, -3);
+		Triangle.triangle(-4, -4, -4);
+		Triangle.triangle(999, 1000, 2001);
+		Triangle.triangle(999, 1000, 1001);
+		Triangle.triangle(1001, 1001, 1002);
+		Triangle.triangle(1002, 1002, 1002);
+	}
 	public static void calendartest() {
 		Calendar.calendar(1000, 5, 15);
 		Calendar.calendar(1001, 6, 15);
@@ -38,6 +51,48 @@ public class sTest {
 		Calendar.calendar(1800, 2, 29);
 		Calendar.calendar(1600, 2, 29);
 		Calendar.calendar(1999, 12, 31);
+	}
+	public static void calendartest2() {
+		Calendar.calendar(2019, 1, 15);
+		Calendar.calendar(2019, 3, 28);
+		Calendar.calendar(2019, 5, 29);
+		Calendar.calendar(2019, 7, 30);
+		Calendar.calendar(2019, 8, 31);
+		Calendar.calendar(2019, 4, 16);
+		Calendar.calendar(2019, 6, 28);
+		Calendar.calendar(2019, 9, 29);
+		Calendar.calendar(2019, 11, 30);
+		Calendar.calendar(2019, 6, 31);
+		Calendar.calendar(2019, 2, 15);
+		Calendar.calendar(2019, 2, 28);
+		Calendar.calendar(2019, 2, 29);
+		Calendar.calendar(2019, 2, 30);
+		Calendar.calendar(2019, 2, 31);
+		Calendar.calendar(2019, 12, 14);
+		Calendar.calendar(2019, 12, 28);
+		Calendar.calendar(2019, 12, 29);
+		Calendar.calendar(2019, 12, 30);
+		Calendar.calendar(2019, 12, 31);
+		Calendar.calendar(2020, 1, 15);
+		Calendar.calendar(2020, 3, 28);
+		Calendar.calendar(2020, 5, 29);
+		Calendar.calendar(2020, 7, 30);
+		Calendar.calendar(2020, 8, 31);
+		Calendar.calendar(2020, 4, 13);
+		Calendar.calendar(2020, 6,28);
+		Calendar.calendar(2020, 9, 29);
+		Calendar.calendar(2020, 11, 30);
+		Calendar.calendar(2020, 9, 31);
+		Calendar.calendar(2020, 2, 11);
+		Calendar.calendar(2020, 2, 28);
+		Calendar.calendar(2020, 2, 29);
+		Calendar.calendar(2020, 2, 30);
+		Calendar.calendar(2020, 2, 31);
+		Calendar.calendar(2020, 12, 19);
+		Calendar.calendar(2020, 12, 28);
+		Calendar.calendar(2020, 12, 29);
+		Calendar.calendar(2020, 12, 30);
+		Calendar.calendar(2020, 12, 31);
 	}
 	public static void calendartest7() {
 		Calendar.calendar(2019, 6, 15);
@@ -158,10 +213,12 @@ public class sTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		triangletest();
+		triangletest2();
 //		System.out.println("------------------�ָ���------------------------");
 //		calendartest();
+//		calendartest2();
 //		System.out.println("------------------�ָ���------------------------");
-		saletest();
+//		saletest();
 //		System.out.println("------------------�ָ���------------------------");
 //		calendartest7();
 	}

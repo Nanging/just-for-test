@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Task6 {
     public static Collection<Object[]> boundaryValueTestCase = Arrays.asList(
-    		
     		new Object[][]{
 		        {0,6,100.0},{1,6,100.0},{30,6,100.0},{59,6,100.0},{60,6,100.0},
 		        {61,6,100.0},{90,6,100.0},{119,6,100.0},{120,6,100.0},{121,6,100.0},
@@ -64,16 +63,5 @@ public class Task6 {
 //		boundaryValueTesting();
 //		equivalenceClassTesting();
 		decisionTableTesting();
-//		Scanner in = new Scanner(System.in);
-//		System.out.println("选择您的支付方式：（1.支付宝 2.银行卡）");
-//		int t = in.nextInt();
-//		if (t==1) {
-//			System.out.println("您选择支付宝支付；");
-//		}else if (t==2) {
-//			System.out.println("您选择银行卡支付；");
-//		}else {
-//			System.out.println("输入错误");
-//		}
-//		in.close();
 	}
 }
