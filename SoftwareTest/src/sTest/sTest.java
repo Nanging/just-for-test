@@ -208,17 +208,44 @@ public class sTest {
 		case27.add(new Sale(-1, 0, 0));
 		SaleSystem.sell(case27);
 		System.out.println("----------------------------");
+		System.out.println("----------------------------");
+		ArrayList<Sale> case31 = new ArrayList<>();
+		case31.add(new Sale(5, 5, 5));
+		case31.add(new Sale(-1, 0, 0));
+		SaleSystem.sell(case31);
+		System.out.println("----------------------------");
+		ArrayList<Sale> case32 = new ArrayList<>();
+		case32.add(new Sale(10, 10, 10));
+		case32.add(new Sale(-1, 0, 0));
+		SaleSystem.sell(case32);
+		System.out.println("----------------------------");
+		ArrayList<Sale> case33 = new ArrayList<>();
+		case33.add(new Sale(14, 14, 14));
+		case33.add(new Sale(-1, 0, 0));
+		SaleSystem.sell(case33);
+		System.out.println("----------------------------");
+		ArrayList<Sale> case34 = new ArrayList<>();
+		case34.add(new Sale(18, 18, 18));
+		case34.add(new Sale(-1, 0, 0));
+		SaleSystem.sell(case34);
+		System.out.println("----------------------------");
+		ArrayList<Sale> case35 = new ArrayList<>();
+		case35.add(new Sale(20, 20, 20));
+		case35.add(new Sale(-1, 0, 0));
+		SaleSystem.sell(case35);
+		System.out.println("----------------------------");
+		
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		triangletest();
-		triangletest2();
+//		triangletest2();
 //		System.out.println("------------------�ָ���------------------------");
 //		calendartest();
 //		calendartest2();
 //		System.out.println("------------------�ָ���------------------------");
-//		saletest();
+		saletest();
 //		System.out.println("------------------�ָ���------------------------");
 //		calendartest7();
 	}
