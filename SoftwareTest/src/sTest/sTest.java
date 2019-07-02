@@ -34,7 +34,7 @@ public class sTest {
 		Calendar.calendar(1802, 6, 2);
 		Calendar.calendar(1801, 6, 30);
 		Calendar.calendar(1801, 6, 31);
-		System.out.println();
+//		System.out.println();
 		Calendar.calendar(1800, 2, 29);
 		Calendar.calendar(1600, 2, 29);
 		Calendar.calendar(1999, 12, 31);
@@ -171,13 +171,13 @@ public class sTest {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		triangletest();
+//		triangletest();
 //		System.out.println("------------------�ָ���------------------------");
 //		calendartest();
 //		System.out.println("------------------�ָ���------------------------");
 //		saletest();
 //		System.out.println("------------------�ָ���------------------------");
-//		calendartest7();
+		calendartest7();
 	}
 
 }
