@@ -10,37 +10,22 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-@RunWith(Parameterized.class)
-public class AddTest {
+import junit.framework.TestCase;
 
-//	@Test
-//	public void testAdd() {
-//		assertEquals(9, new Main().add(5, 4));
-//	}
-	int except;  
-    int input1;  
-    int input2;  
-    
-    @Parameters
-    public static Collection<Object[]> initTestData(){
-    	return Arrays.asList(
-	        new Object[][]{
-	        {3,1,2},
-	        {10,5,5},
-	        {6,4,2},
-	        {7,3,4}}
-        );
-    }
-    
-    public AddTest(int except,int input1,int input2){
-	    this.except = except;
-	    this.input1 = input1;
-	    this.input2 = input2;
-    }
+//@RunWith(Parameterized.class)
+public class AddTest extends TestCase{
 
+	@Test
+	public void testAdd() {
+		assertEquals(9, new Main().add(5, 4));
+	}
+    public AddTest(String args) {
+    	super(args);
+    }
     @Test
     public void testAdd2() {
-    	assertEquals(except, new Main().add(input1, input2));
+    	assertEquals(3, new Main().add(2, 2));
+
     }
 
 }
